@@ -34,9 +34,9 @@ function sendTelegramMessageAndRedirect() {
   fetch(url, params)
     .then((response) => {
       if (!response.ok) {
-        console.log(response);
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+      console.log(response)
       return response.json();
     })
     .then((data) => {
